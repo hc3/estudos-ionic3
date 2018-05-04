@@ -1,10 +1,10 @@
 ## Ionic V3
 
 Comandos básicos
-- ionic generate page <name_page>
-- ionic generate component <name_component>
+- ionic generate page <name_page>.
+- ionic generate component <name_component>.
 
-### NgModule (decorator)
+### NgModule (decorator).
 
   - Decorator.
   - Metadados.
@@ -12,18 +12,18 @@ Comandos básicos
     - EntryComponents: Páginas ( apenas ).
     - Providers: Services.
     
-### Página x Component
+### Página x Component.
 
-  - Component
+  - Component.
     - src/components ( folder ).
     - .html, .scss, .ts ( arquivos ).
     - adicionar no @NgModule em declarations <nome_component></nome_component>.
     
     
   - Página
-    # src/pages ( folder ).
-    # .html, .scss, .ts ( arquivos ).
-    # adicionar no @ngModule em declarations e entryComponents.
+    - src/pages ( folder ).
+    - .html, .scss, .ts ( arquivos ).
+    - adicionar no @ngModule em declarations e entryComponents.
     
  > Um component é um elemento dentro de uma página e uma página é uma view completa que pode conter vários components.
  
