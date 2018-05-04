@@ -29,4 +29,16 @@ Comandos básicos
  
  > Uma página precisa ser inputada no declarations e entrycomponents do modulo principal (````@NgModule```` ).
  
- ### Sistema de navegação
+ ### Sistema de navegação.
+
+  - Navegação funciona baseada na estrutura de dados pilha.
+  - LIFO ( ùltimo a entrar, primeiro a sair ).
+  - Métodos ````push() pop() setRoot() ```` são usados para empilhar, desempilhar e setar página como root.
+  - ````<ion-nav>```` é quem gerência esse processo.
+  - ````NavController```` quem tem os métodos push, pop e setRoot.
+
+ ### Navegando a partir da raiz.
+ 
+  - Usando o ````@ViewChild()```` conseguimos acessar qualquer elemento no app.component.ts e a partir da ai fazer a navegação ou setar uma página como root.
+  
+  
