@@ -8,16 +8,16 @@ Comandos básicos
 
   - Decorator.
   - Metadados.
-    # Declarations: Component, Pipe, Diretivas e Páginas.
-    # EntryComponents: Páginas ( apenas ).
-    # Providers: Services.
+    - Declarations: Component, Pipe, Diretivas e Páginas.
+    - EntryComponents: Páginas ( apenas ).
+    - Providers: Services.
     
 ### Página x Component
 
   - Component
-    # src/components ( folder ).
-    # .html, .scss, .ts ( arquivos ).
-    # adicionar no @NgModule em declarations <nome_component></nome_component>.
+    - src/components ( folder ).
+    - .html, .scss, .ts ( arquivos ).
+    - adicionar no @NgModule em declarations <nome_component></nome_component>.
     
     
   - Página
