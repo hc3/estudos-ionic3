@@ -17,7 +17,7 @@ Comandos básicos
   - Component.
     - src/components ( folder ).
     - .html, .scss, .ts ( arquivos ).
-    - adicionar no @NgModule em declarations <nome_component></nome_component>.
+    - adicionar no @NgModule em declarations ````<nome_component></nome_component>.````
     
     
   - Página
@@ -27,6 +27,6 @@ Comandos básicos
     
  > Um component é um elemento dentro de uma página e uma página é uma view completa que pode conter vários components.
  
- > Uma página precisa ser inputada no declarations e entrycomponents do modulo principal ( @NgModule ).
+ > Uma página precisa ser inputada no declarations e entrycomponents do modulo principal (````@NgModule```` ).
  
  ### Sistema de navegação
