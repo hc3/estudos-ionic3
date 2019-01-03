@@ -4,12 +4,12 @@
 Vou colocar um resumo sobre o que venho estudando a respeito do Angular6.
 
 ## Instalando o angular cli.
-````
+````bash
 npm install -g @angular/cli
 ````
 
 ## Para criar um novo projeto com o angular cli.
-````
+````bash
 ng new <project_name> --routing --style=scss
 ````
 
@@ -21,12 +21,12 @@ ng new <project_name> --routing --style=scss
 + **--routing** ___ falta colocar ___
 
 ### **Modulos**
-````
+````bash
 ng g m <folder/name_module> --spec=false --routing
 ````
 
 ### **Componentes***
-````
+````bash
 ng g c <folder/name_component> --spec=false --inline-style --inline-template
 ````
 
@@ -78,6 +78,32 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ````	
 esse é um exemplo básico do uso do Angualar Modules, declaramos partes essenciais da aplicação no AppModule e importamos o mesmo para que a aplicação faça bootstrap, com isso temos todos os recursos necessários imortados no Module e disponivel para toda a seção da aplicação.
 
+Quando formos usar a estrutura de modulos do Angular, devemos manter a imagem abaixo em mente.
+
 <img src="imgs/angular_module_structure.jpg">
 
+Essa estrutura ajuda a facilitar qualquer manutenção mantendando cada parte do sistema separada por modulos.
 
+### Feature, Shared e Core Modules.
+
+Dependendo do tamanho e complexidade do projeto, você talvez use tudo dentro do AppModule, colocando todas as declarações lá, contudo se a aplicação for maior ou ficar maior é extremamente recomendado o uso do Core, Shared e Feature Modules. Ao fazer isso estamos garantindo a separação adequada de cada funcionalidade, com isso temos uma aplicação escalável a seguir vamos explicar como funciona cada um desses modulos.
+
+- **Feature Module**
+    - Feature module é um module com todo o conteúdo que vamos encapsular dentro de uma única área.
+    - Applicações devem ter multiplos feature modules.
+    - Imagine um feature module como uma aplicação independente dentro da sua aplicação completa.
+    - Feature Module representa uma seção, normalmente tem um componente raiz que o exporta e é usado por um modulo pai, todas as outras partes desse recurso serão colocadas em um componente raiz.
+
+- **Shared Module**
+    - O Shared Module server para partes da aplicação que precisam ser usadas por muitas áreas ou recursos da aplicação.
+    - Se um componente está sendo usado por muitos recursos declare esse componente no shared module.
+    - Services e Pipes são normalmente declarados no shared modules.
+    - Shared Modules não precisam necessariamente seguir uma seção, a ideia é colocar tudo e prover como algo compartilhado para todos.
+
+- **Core Module**
+    - O Core Module é uma ótima maneira de separar cada camada da aplicação, com ele podemos separar tudo em modulos e cada um tem o seu Core.
+    - Devemos declarar todos os Features e Shared Modules no Core Module e prover o Core Module para o AppModule.
+    - Para tudo que precisamos que seja usados em todos os Feature Modules devemos declarar no Core Module.
+    - Imagine o Core Module como pai do Feature Module para todo o conteúdo que estamos adicionando a aplicação.
+
+### Exemplo de aplicação.
